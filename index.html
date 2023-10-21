@@ -38,7 +38,7 @@
         </header>
 
         <!-- Navigation -->
-        <nav>
+        <nav class="navbar">
             <ul>
                 <li><a href="#about">About Me</a></li>
                 <li><a href="#projects">Projects</a></li>
@@ -49,30 +49,38 @@
 
         <!-- Main Content -->
         <main>
-            <article>
-                <section id="about">
+            <article class="grid-container">
+                <section id="about" class="grid-item">
                     <h2>About Me</h2>
-                    <P>Hi, I'm Charles a young (22?) and aspiring developer. Fairly new to programing but hopefully as days turn to months and months turn to years this page will become a bit more populated.</P>
-                    <p>My interests are in games, movies and books. I love all things fantasy and even though I have never played before I also love DnD.</p>
+                    <p>Hi, I'm Charles, a young (22?) and aspiring developer. Fairly new to programming but hopefully as days turn to months and months turn to years this page will become a bit more populated.</p>
+                    <p>My interests are in games, movies, and books. I love all things fantasy and even though I have never played before, I also love DnD.</p>
+                    <h3>Here's some placeholder text: </h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro itaque ea possimus. A fugiat quae repudiandae rem sit eum cumque ratione ipsa itaque similique quod id et, architecto nobis consequuntur, dolorum cum? Tempore in, iste labore quibusdam recusandae suscipit, ipsum harum repellat nemo ullam cupiditate deleniti qui vero nobis? Ipsa voluptate doloremque unde quaerat quos ad facilis, quisquam rerum expedita cum quibusdam a, totam voluptas perferendis delectus? Est ducimus maiores illum deleniti corporis voluptatem perferendis nostrum, quam deserunt consequatur consectetur quibusdam, quod cum, repellendus libero dolores delectus blanditiis exercitationem. Perspiciatis sint molestias deleniti. Repellendus velit cumque distinctio id temporibus reprehenderit!</p>
                 </section>
-                <section id="projects">
+                <section id="projects" class="grid-item">
                     <h2>Projects</h2>
                     <details class="projects" id="rollStats">
                         <summary class="project-title">
                             <h3>rollStats</h3>
                         </summary>
+                        <div>
+                            <label for="characterName">Character Name: </label>
+                            <input type="text" id="characterName" placeholder="Enter character name">
+                        </div>
                         <div id="stats"></div>
                         <br>
-                        <button onclick="runCode()">Run Code</button>
+                        <button id="rollStatsButton">Roll Stats</button>
+                        <a href="https://github.com/ch0cc0/rollStats" target="_blank" rel="noopener noreferrer"><button id="github-rollstats">Visit GitHub</button></details></a>
                     </details>
                 </section>
-                <section id="contact">
+                <section id="contact" class="grid-item">
                     <h2>Contacts</h2>
-                <p>Email: <a href="mailto:charlescook80@outlook.com">charlescook80@outlook.com</a></p>
-                <p>GitHub: <a href="http://github.com/ch0cc0">ch0cc0</a></p>
+                    <p>Email: <a href="mailto:charlescook80@outlook.com">charlescook80@outlook.com</a></p>
+                    <p>GitHub: <a href="http://github.com/ch0cc0">ch0cc0</a></p>
                 </section>
-            </article><br>
+            </article>
         </main>
+
 
         <!-- Footer -->
         <footer>
@@ -80,7 +88,8 @@
         </footer>
 
         <!-- JavaScript Files -->
-        <script src="js/template.js"></script>
+        <script src="js/script.js"></script>
+        <script src="js/stats.js"></script>
     </body>
 
 </html>

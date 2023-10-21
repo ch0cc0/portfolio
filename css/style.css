@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,300;1,500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=MedievalSharp&family=Space+Mono&display=swap");
 
 /* Reset some default browser styles */
 *,
@@ -15,6 +16,9 @@
    --primary-bg-text-color: #000000;
    --primary-fg-color: #000000;
    --primary-fg-text-color: #ffffff;
+   --stats-bg-color: #f5f5f5;
+   --stats-border-color: #ccc;
+   --stats-text-color: #000; 
 }
 
 /* Dark theme */
@@ -23,7 +27,27 @@
    --primary-bg-text-color: #ffffff;
    --primary-fg-color: #ffffff;
    --primary-fg-text-color: #000000;
+   --stats-bg-color: #1a1a1a; /* a dark grey for the dark theme */
+   --stats-border-color: #444; 
+   --stats-text-color: #fff; 
 }
+
+.grid-container {
+    display: grid;
+    grid-template-rows: auto auto auto; /* Three rows */
+    gap: 2rem; /* Spacing between grid items */
+    padding: 2rem; /* Padding around the grid */
+    width: 70%; /* Set the desired width percentage or fixed width */
+    margin: 0 auto; /* Centers the grid on the page */
+    max-width: 1000px; /* Optional: sets a maximum width */
+}
+
+.grid-item {
+    padding: 1rem;
+    border: 1px solid var(--stats-border-color);
+    background-color: var(--stats-bg-color);
+}
+
 
 body, header, nav ul, footer, button, input[type="button"], input[type="submit"], nav ul li a:hover {
     transition: background-color 1.0s, color 1.0s;
@@ -51,6 +75,19 @@ header {
     color: var(--primary-fg-text-color);
     text-align: center;
     padding: 1rem 0;
+}
+
+.navbar {
+    transition: top 0.3s; /* Smooth transition */
+}
+
+.fixed-top {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: var(--primary-fg-color); 
 }
 
 nav ul {
@@ -104,6 +141,10 @@ input[type="submit"]:hover {
     border: 1px solid var(--primary-bg-text-color);
 }
 
+details {
+    cursor: pointer;
+}
+
 #theme-toggle {
     margin: 0;
 }
@@ -112,17 +153,49 @@ input[type="submit"]:hover {
     display: inline;
 }
 
+#rollStats {
+    font-family: 'MedievalSharp';
+}
+
 #stats {
-    border: 1px solid #ccc;
+    border: 1px solid #704214; /* dark brown border */
     padding: 10px;
-    font-family: monospace;
     white-space: pre-wrap;
-    background-color: #f5f5f5;
+    background-color: #f7e6d1; /* light brownish background color */
+    background-image: url('../media/images/old_paper.jpg'); /* replace with your image path */
+    background-size: cover; /* ensures the image covers the div */
+    background-repeat: no-repeat;      /* Prevents the image from repeating */
+    background-position: center;       /* Centers the background image */
+    color: #3d2b1f; /* dark brown text color */
+    box-sizing: border-box;
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1); /* subtle shadow */
+    font-family: 'Times New Roman', serif; /* an example old-style font */
+    border-radius: 5px; /* slightly rounded corners */
+    text-align: center;
+    font-size: large;
+    font-weight: bold;
+    position: relative;
+}
+
+#contact a {
+    color: var(--primary-fg-color);
+    text-decoration: none;
+    transition: opacity 0.3s ease; 
+    opacity: 0.7; /* starting with reduced opacity */
+}
+
+#contact a:hover, #contact a:focus {
+    opacity: 1; /* full opacity on hover */
+}
+
+#contact a:visited {
+    color: #7c7c7c; /* A neutral grey, but you can adjust this as needed */
 }
 
 footer {
     background-color: var(--primary-fg-color);
     color: var(--primary-fg-text-color); /* Changed to use the correct text color variable */
+    padding-left: 0.5rem;
 }
 
 footer a {
