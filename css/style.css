@@ -218,4 +218,14 @@ footer a {
     nav ul li:last-child {
         border-bottom: 0.1rem solid #444; /* This can be further adjusted to use variables */
     }
+
+    .grid-container {
+        gap: 0.5rem; /* Spacing between grid items */
+        padding: 0.5rem; /* Padding around the grid */
+        width: 90%; /* Set the desired width percentage or fixed width */
+    }
+    
+    .grid-item {
+        padding: 0.2rem;
+    }
 }
