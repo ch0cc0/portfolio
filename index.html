@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <!-- Essential meta tags -->
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <!-- SEO Meta Tags -->
+        <meta name="description" content="Portfolio website for Charles Cook ">
+        <meta name="keywords" content="Portfolio, Charles, Cook">
+        <meta name="author" content="Charles Cook">
+
+        <!-- Webpage Title -->
+        <title>Portfolio</title>
+
+        <!-- jQuery Link -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+        <!-- Stylesheet Link -->
+        <link  rel="stylesheet" href="css/style.css">
+        
+        <!-- Optional: Favicon -->
+        <link rel="icon" type="image/png" sizes="32x32" href="media/images/Slime.png">
+
+        <!-- Optional: Web Fonts -->
+        <!-- Example: Google Fonts -->
+        <!-- <link href="https://fonts.googleapis.com/css?family=Font+Name&display=swap" rel="stylesheet"> -->
+
+        <!-- CSS Preprocessors (if you use any) -->
+        <!-- <link rel="stylesheet" href="path/to/your/style.scss"> -->
+    </head>
+
+    <body>
+        <!-- Header -->
+        <header>
+            <h1 id="website_title">Charles Cook</h1>
+        </header>
+
+        <!-- Navigation -->
+        <nav>
+            <ul>
+                <li><a href="#about">About Me</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><button type="button" id="theme-toggle">Dark/Light Mode</button></li>
+            </ul>
+        </nav>
+
+        <!-- Main Content -->
+        <main>
+            <article>
+                <section id="about">
+                    <h2>About Me</h2>
+                    <P>Hi, I'm Charles a young (22?) and aspiring developer. Fairly new to programing but hopefully as days turn to months and months turn to years this page will become a bit more populated.</P>
+                    <p>My interests are in games, movies and books. I love all things fantasy and even though I have never played before I also love DnD.</p>
+                </section>
+                <section id="projects">
+                    <h2>Projects</h2>
+                    <details class="projects" id="rollStats">
+                        <summary class="project-title">
+                            <h3>rollStats</h3>
+                        </summary>
+                        <div id="stats"></div>
+                        <br>
+                        <button onclick="runCode()">Run Code</button>
+                    </details>
+                </section>
+                <section id="contact">
+                    <h2>Contacts</h2>
+                <p>Email: <a href="mailto:charlescook80@outlook.com">charlescook80@outlook.com</a></p>
+                <p>GitHub: <a href="http://github.com/ch0cc0">ch0cc0</a></p>
+                </section>
+            </article><br>
+        </main>
+
+        <!-- Footer -->
+        <footer>
+            <p>Made by Charles Cook</p>
+        </footer>
+
+        <!-- JavaScript Files -->
+        <script src="js/template.js"></script>
+    </body>
+
+</html>

@@ -1,0 +1,148 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,300;1,500&display=swap");
+
+/* Reset some default browser styles */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Light theme */
+:root {
+   --primary-bg-color: #ffffff;
+   --primary-bg-text-color: #000000;
+   --primary-fg-color: #000000;
+   --primary-fg-text-color: #ffffff;
+}
+
+/* Dark theme */
+[data-theme="dark"] {
+   --primary-bg-color: #000000;
+   --primary-bg-text-color: #ffffff;
+   --primary-fg-color: #ffffff;
+   --primary-fg-text-color: #000000;
+}
+
+body, header, nav ul, footer, button, input[type="button"], input[type="submit"], nav ul li a:hover {
+    transition: background-color 1.0s, color 1.0s;
+}
+
+body {
+    font-family: 'Poppins', 'Arial', sans-serif;
+    line-height: 1.6;
+    background-color: var(--primary-bg-color);
+    color: var(--primary-bg-text-color);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main {
+    flex: 1;
+    margin-left: 1rem;
+    margin-top: 1rem;
+
+}
+
+header {
+    background-color: var(--primary-fg-color);
+    color: var(--primary-fg-text-color);
+    text-align: center;
+    padding: 1rem 0;
+}
+
+nav ul {
+    background-color: var(--primary-fg-color);
+    overflow: hidden;
+    color: var(--primary-fg-text-color);
+    padding: 0;
+    text-align: center;
+    margin: 0;
+    list-style-type: none;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: var(--primary-fg-text-color);
+    padding: 0.5rem 1rem;
+    transition: background-color 0.3s;
+}
+
+nav ul li a:hover {
+    background-color: var(--primary-fg-color);
+    color: var(--primary-text-color); /* Adjusted for contrast on hover */
+}
+
+button, 
+input[type="button"], 
+input[type="submit"] {
+    background-color: var(--primary-fg-color);
+    color: var(--primary-fg-text-color);
+    padding: 10px 20px;
+    border: none;
+    border-radius: 3px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    outline: none;
+    margin: 1rem;
+    margin-top: -1rem;
+}
+
+button:hover,
+input[type="button"]:hover, 
+input[type="submit"]:hover {
+    background-color: var(--primary-bg-color);
+    color: var(--primary-bg-text-color);
+    border: 1px solid var(--primary-bg-text-color);
+}
+
+#theme-toggle {
+    margin: 0;
+}
+
+.project-title h3 {
+    display: inline;
+}
+
+#stats {
+    border: 1px solid #ccc;
+    padding: 10px;
+    font-family: monospace;
+    white-space: pre-wrap;
+    background-color: #f5f5f5;
+}
+
+footer {
+    background-color: var(--primary-fg-color);
+    color: var(--primary-fg-text-color); /* Changed to use the correct text color variable */
+}
+
+footer a {
+    color: var(--primary-fg-text-color);
+    text-decoration: underline;
+}
+
+/* Responsive styles */
+@media screen and (max-width: 768px) {
+    nav ul {
+        padding-left: 0;
+    }
+
+    nav ul li {
+        display: block;
+        margin: 0;
+        border-top: 0.1rem solid #444; /* This can be further adjusted to use variables */
+    }
+
+    nav ul li:last-child {
+        border-bottom: 0.1rem solid #444; /* This can be further adjusted to use variables */
+    }
+}
