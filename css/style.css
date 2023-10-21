@@ -154,7 +154,7 @@ details {
 }
 
 #rollStats {
-    font-family: 'MedievalSharp';
+    font-family: 'MedievalSharp', 'Times New Roman', serif;
 }
 
 #stats {
@@ -169,7 +169,7 @@ details {
     color: #3d2b1f; /* dark brown text color */
     box-sizing: border-box;
     box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1); /* subtle shadow */
-    font-family: 'Times New Roman', serif; /* an example old-style font */
+    font-family: 'MedievalSharp', 'Times New Roman', serif; /* an example old-style font */
     border-radius: 5px; /* slightly rounded corners */
     text-align: center;
     font-size: large;
